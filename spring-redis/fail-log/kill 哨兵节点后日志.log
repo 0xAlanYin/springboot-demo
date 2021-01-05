@@ -1,0 +1,51 @@
+2021-01-05 14:47:31.608 ERROR 28866 --- [8.216.40:26381]] redis.clients.jedis.JedisSentinelPool    : Lost connection to Sentinel at 192.168.216.40:26381. Sleeping 5000ms and retrying.
+
+redis.clients.jedis.exceptions.JedisConnectionException: Unexpected end of stream.
+	at redis.clients.util.RedisInputStream.ensureFill(RedisInputStream.java:199) ~[jedis-2.9.0.jar:na]
+	at redis.clients.util.RedisInputStream.readByte(RedisInputStream.java:40) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.Protocol.process(Protocol.java:151) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.Protocol.read(Protocol.java:215) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:340) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.Connection.getRawObjectMultiBulkReply(Connection.java:285) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.JedisPubSub.process(JedisPubSub.java:121) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.JedisPubSub.proceed(JedisPubSub.java:115) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.Jedis.subscribe(Jedis.java:2680) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.JedisSentinelPool$MasterListener.run(JedisSentinelPool.java:291) ~[jedis-2.9.0.jar:na]
+
+2021-01-05 14:47:36.609 ERROR 28866 --- [8.216.40:26381]] redis.clients.jedis.JedisSentinelPool    : Lost connection to Sentinel at 192.168.216.40:26381. Sleeping 5000ms and retrying.
+
+redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+	at redis.clients.jedis.Connection.connect(Connection.java:207) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.Connection.setTimeoutInfinite(Connection.java:94) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.Jedis.subscribe(Jedis.java:2678) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.JedisSentinelPool$MasterListener.run(JedisSentinelPool.java:291) ~[jedis-2.9.0.jar:na]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_151]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_151]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_151]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_151]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_151]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_151]
+	at redis.clients.jedis.Connection.connect(Connection.java:184) ~[jedis-2.9.0.jar:na]
+	... 4 common frames omitted
+
+2021-01-05 14:47:41.614 ERROR 28866 --- [8.216.40:26381]] redis.clients.jedis.JedisSentinelPool    : Lost connection to Sentinel at 192.168.216.40:26381. Sleeping 5000ms and retrying.
+
+redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused (Connection refused)
+	at redis.clients.jedis.Connection.connect(Connection.java:207) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.Connection.setTimeoutInfinite(Connection.java:94) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.Jedis.subscribe(Jedis.java:2678) ~[jedis-2.9.0.jar:na]
+	at redis.clients.jedis.JedisSentinelPool$MasterListener.run(JedisSentinelPool.java:291) ~[jedis-2.9.0.jar:na]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_151]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_151]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_151]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_151]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_151]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_151]
+	at redis.clients.jedis.Connection.connect(Connection.java:184) ~[jedis-2.9.0.jar:na]
+	... 4 common frames omitted
+
+2021-01-05 14:47:46.618 ERROR 28866 --- [8.216.40:26381]] redis.clients.jedis.JedisSentinelPool    : Lost connection to Sentinel at 192.168.216.40:26381. Sleeping 5000ms and retrying.
