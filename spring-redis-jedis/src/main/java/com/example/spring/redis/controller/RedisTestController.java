@@ -23,4 +23,5 @@ public class RedisTestController {
         String value = redisUtil.getString(0, "testKey");
         return value;
     }
+
 }
