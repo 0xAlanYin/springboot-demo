@@ -1,4 +1,4 @@
-package main.java.com.alan.demo.validation;
+package com.alan.demo.validation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

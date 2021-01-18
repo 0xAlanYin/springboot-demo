@@ -1,4 +1,4 @@
-package main.java.com.alan.demo.validation.controller;
+package com.alan.demo.validation.controller;
 
 import com.alan.demo.validation.entity.UserDO;
 import lombok.extern.slf4j.Slf4j;

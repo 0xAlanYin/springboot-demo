@@ -18,6 +18,7 @@
 
     <modules>
         <module>spring-validation</module>
+        <module>spring-boot-starter-custom</module>
     </modules>
 
     <dependencyManagement>

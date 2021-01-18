@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=starter.CustomAutoConfiguration
+# 5.添加spring.factories: 当所有的基础代码和自动配置类都准备完成，就需要对其进行注册。也就是我们熟悉的META-INF/spring.factories配置文件了。当然，这个需要在自己的项目中进行创建。
+# 在spring.factories配置文件中注册MsgAutoConfiguration类。如果有多个自动配置类，用逗号分隔换行即可。
+# 至此，一个基于 Spring Boot 的自动配置starter便完成了。使用“maven:install”将其打包到本地maven仓库或上传至私服。其他项目便可以通过maven依赖使用。

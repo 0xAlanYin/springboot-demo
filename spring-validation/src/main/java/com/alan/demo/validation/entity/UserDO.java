@@ -22,5 +22,5 @@ public class UserDO {
 
     @NotBlank(message = "邮箱不能为空")
     private String email;
-
 }
+
