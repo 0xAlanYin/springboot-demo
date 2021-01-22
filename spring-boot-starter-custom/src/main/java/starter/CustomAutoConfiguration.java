@@ -30,6 +30,7 @@ public class CustomAutoConfiguration {
     @Autowired
     private CustomProperties customProperties;
 
+
     @Bean
     @ConditionalOnMissingBean(MsgService.class)
     @ConditionalOnProperty(prefix = "msg", value = "enabled", havingValue = "true")
@@ -39,10 +40,34 @@ public class CustomAutoConfiguration {
         return msgService;
     }
 
+    /**
+     * @ConditionalOnMissingBean 与 @ConditionalOnBean 作用：根据当前环境或者容器情况来动态注入bean，要配合@Bean使用
+     *
+     * @ConditionalOnMissingBean 作用：判断当前需要注入 Spring 容器中的 bean 的实现类是否已经含有，有的话不注入，没有就注入
+     * @ConditionalOnBean 作用：判断当前需要注册的 bean 的实现类否被 spring 管理，如果被管理则注入，反之不注入
+     */
+
+    /**
+     * @Conditional 扩展注解 | 作用（判断是否满足当前指定条件）
+     * @ConditionalOnJava 系统的java版本是否符合要求
+     * @ConditionalOnBean 容器中存在指定Bean
+     * @ConditionalOnMissingBean 容器中不存在指定Bean
+     * @ConditionalOnExpression 满足SpEL表达式指定
+     * @ConditionalOnClass 系统中有指定的类
+     * @ConditionalOnMissingClass 系统中没有指定的类
+     * @ConditionalOnSingleCandidate 容器中只有一个指定的Bean，或者这个Bean是首选Bean
+     * @ConditionalOnProperty 系统中指定的属性是否有指定的值
+     * @ConditionalOnResource 类路径下是否存在指定资源文件
+     * @ConditionalOnWebApplication 当前是web环境
+     * @ConditionalOnNotWebApplication 当前不是web环境
+     * @ConditionalOnJndi JNDI存在指定项
+     */
+
 }
 
 /**
  * 类上的注解:
+ *
  * @Configuration 用来声明该类为一个配置类；
  * @ConditionalOnClass 注解说明只有当 MsgService 类存在于 classpath 中时才会进行相应的实例化；
  * @EnableConfigurationProperties 将 application.properties 中对应的属性配置设置于 MsgProperties 对象中；
