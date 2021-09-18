@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 模拟生产者
+ * <p>
+ * 参考链接：https://www.jianshu.com/p/7a284bf4efc9
  *
  * @author Alan Yin
  * @date 2021/1/22
@@ -25,4 +27,18 @@ public class KafkaProducer {
         return "success";
     }
 
+
+    /**
+     *
+     * 1.启动 kafka(for mac)
+     * brew services start kafka
+     *
+     * 2.进入 kafka 安装目录查看当前的 topic
+     * cd /usr/local/Cellar/kafka/2.5.0
+     * ./bin/kafka-topics -list  --zookeeper localhost:2181
+     *
+     * 3.命令行创建 topic
+     * ./bin/kafka-topics --create -zookeeper localhost:2181 --replication-factor 3 --partitions 3 --topic test_default_topic
+     *
+     */
 }

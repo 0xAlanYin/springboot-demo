@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class KafkaListener {
 
-    @org.springframework.kafka.annotation.KafkaListener(id = "myGroup", topics = "default_topic")
+    @org.springframework.kafka.annotation.KafkaListener(id = "myGroup", topics = "test_default_topic")
     public void listen(String input) {
         log.info("input msg value:{}", input);
     }
