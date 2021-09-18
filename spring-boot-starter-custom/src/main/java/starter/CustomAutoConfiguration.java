@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import starter.property.CustomProperties;
 import starter.service.DefaultMsgService;
@@ -22,6 +23,7 @@ import starter.service.MsgService;
 @Configuration
 @ConditionalOnClass(MsgService.class)
 @EnableConfigurationProperties(CustomProperties.class)
+@ComponentScan("starter.service")
 public class CustomAutoConfiguration {
 
     /**
