@@ -41,6 +41,18 @@
             <artifactId>spring-boot-starter-custom</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!--apollo-openapi-->
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-openapi</artifactId>
+            <version>1.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
 </project>

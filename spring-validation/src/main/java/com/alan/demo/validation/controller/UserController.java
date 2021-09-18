@@ -1,7 +1,9 @@
 package com.alan.demo.validation.controller;
 
 import com.alan.demo.validation.entity.UserDO;
+import com.alan.demo.validation.service.StudyService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
@@ -39,5 +41,13 @@ public class UserController {
             }
         }
         return errorMsg;
+    }
+
+    @Autowired
+    private StudyService studyService;
+
+    @GetMapping("/test/conditionalOnProperty")
+    public String testConditionalOnProperty() {
+        return studyService.hello();
     }
 }
