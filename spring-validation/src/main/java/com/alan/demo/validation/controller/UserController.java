@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author Alan Yin
@@ -49,5 +50,20 @@ public class UserController {
     @GetMapping("/test/conditionalOnProperty")
     public String testConditionalOnProperty() {
         return studyService.hello();
+    }
+
+
+    @GetMapping("/test2")
+    public String testConditionalOnProperty2() {
+        AtomicInteger time = new AtomicInteger(0);
+//        while (true) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("cost time:" + time.incrementAndGet() + " s");
+//        }
+        return "ok";
     }
 }

@@ -6,10 +6,10 @@ import java.io.Serializable;
  * @author Alan Yin
  * @date 2021/1/7
  */
-
 public class User implements Serializable {
 
     private static final long serialVersionUID = 4220515347228129741L;
+
     private Integer id;
     private String username;
     private Integer age;

@@ -1,4 +1,4 @@
-package com.example.spring.redis;
+package com.example.spring.redis.util;
 
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import redis.clients.jedis.JedisSentinelPool;
@@ -11,7 +11,6 @@ class RedisSentinelTest {
 
     /**
      * redis 哨兵集群测试
-     *
      */
     public static void main(String[] args) {
         Set<String> sentinelSet = new HashSet<>();

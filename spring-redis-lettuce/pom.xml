@@ -30,11 +30,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!--步骤1：引入依赖-->
         <!--springboot 2.0 通过 lettuce集成Redis服务-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
+        <!--Lettuce pool 缓存连接池：如果不实用 pool,该依赖不引用-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
