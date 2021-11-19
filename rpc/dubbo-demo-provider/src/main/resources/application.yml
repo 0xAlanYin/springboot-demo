@@ -1,0 +1,28 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: dubbo-demo-provider
+
+dubbo:
+  scan:
+    base-packages: com.alan.dubbo.demo.provider
+  protocol:
+    name: dubbo
+    # name: rest 使用 restful 协议
+    port: 12345
+  registry:
+    address: zookeeper://localhost:2181
+    timeout: 10000
+  metadata-report:
+    address: zookeeper://localhost:2181
+  application:
+    qos-enable: true
+    qos-port: 22222
+    qos-accept-foreign-ip: true
+    qos-enable-compatible: true
+    qos-host-compatible: localhost
+    qos-port-compatible: 22222
+    qos-accept-foreign-ip-compatible: true
+    qos-host: localhost
