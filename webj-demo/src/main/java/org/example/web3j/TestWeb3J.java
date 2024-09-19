@@ -1,8 +1,6 @@
 package org.example.web3j;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
+import com.google.gson.Gson;
 import io.reactivex.disposables.Disposable;
 import java.math.BigInteger;
 import java.net.ConnectException;
@@ -196,13 +194,9 @@ public class TestWeb3J {
   }
 
   private static String toJsonString(Object object) {
-    ObjectMapper objectMapper = new ObjectMapper();
-    objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
-    try {
-      return objectMapper.writeValueAsString(object);
-    } catch (JsonProcessingException e) {
-      throw new RuntimeException(e);
-    }
+
+    Gson gson = new Gson();
+    return gson.toJson(object);
   }
 
   @NotNull
